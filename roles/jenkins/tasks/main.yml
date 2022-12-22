@@ -7,7 +7,7 @@
     user: admin
 
   loop:
-    - CI-Pipelines
+  - CI-Pipelines
 
 - name: Create a jenkins job using basic authentication
   community.general.jenkins_job:
