@@ -5,6 +5,7 @@
     password: admin1234
     url: http://172.31.14.209:8080
     user: admin
+
   loop:
     - CI-Pipelines
 
