@@ -1,7 +1,7 @@
 - name: Create a folder
   community.general.jenkins_job:
     config: "{{ lookup('file', 'templates/folder.xml') }}"
-    name: "{{folder}}"
+    name: "{{item}}"
     password: admin1234
     url: http://172.31.14.209:8080
     user: admin
