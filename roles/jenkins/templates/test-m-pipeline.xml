@@ -1,0 +1,59 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject plugin="w                                                                                                             orkflow-multibranch">
+    <actions/>
+    <description></description>
+    <properties/>
+    <folderViews class="jenkins.branch.MultiBranchProjectViewHolder" plugin="branc                                                                                                             h-api">
+        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranch                                                                                                             Project" reference="../.."/>
+    </folderViews>
+    <healthMetrics/>
+    <icon class="jenkins.branch.MetadataActionFolderIcon" plugin="branch-api                                                                                                             1.v9985666b_f6cc">
+        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranch                                                                                                             Project" reference="../.."/>
+    </icon>
+    <orphanedItemStrategy class="com.cloudbees.hudson.plugins.folder.computed.Defa                                                                                                             ultOrphanedItemStrategy" plugin="cloudbees-folder">
+        <pruneDeadBranches>true</pruneDeadBranches>
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>-1</numToKeep>
+        <abortBuilds>false</abortBuilds>
+    </orphanedItemStrategy>
+    <triggers>
+        <com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger plugin=                                                                                                             "multibranch-scan-webhook-trigger">
+            <spec></spec>
+            <token>test</token>
+        </com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger>
+    </triggers>
+    <disabled>false</disabled>
+    <sources class="jenkins.branch.MultiBranchProject$BranchSourceList" plugin="br                                                                                                             anch-api">
+        <data>
+            <jenkins.branch.BranchSource>
+                <source class="jenkins.plugins.git.GitSCMSource" plugin="git@">
+                    <id>a84aa28a-b91c-4e8c-b0df-88432bb7e0fd</id>
+                    <remote>https://github.com/EswarAwsDevOps/cart</remote>
+                    <credentialsId></credentialsId>
+                    <traits>
+                        <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
+                        <jenkins.plugins.git.traits.TagDiscoveryTrait/>
+                    </traits>
+                </source>
+                <strategy class="jenkins.branch.DefaultBranchPropertyStrategy">
+                    <properties class="empty-list"/>
+                </strategy>
+                <buildStrategies>
+                    <jenkins.branch.buildstrategies.basic.NamedBranchBuildStrategyImpl plu                                                                                                             gin="basic-branch-build-strategies">
+                        <filters/>
+                    </jenkins.branch.buildstrategies.basic.NamedBranchBuildStrategyImpl>
+                    <jenkins.branch.buildstrategies.basic.BranchBuildStrategyImpl plugin="                                                                                                             basic-branch-build-strategies"/>
+                    <jenkins.branch.buildstrategies.basic.TagBuildStrategyImpl plugin="bas                                                                                                             ic-branch-build-strategies">
+                        <atLeastMillis>-1</atLeastMillis>
+                        <atMostMillis>604800000</atMostMillis>
+                    </jenkins.branch.buildstrategies.basic.TagBuildStrategyImpl>
+                </buildStrategies>
+            </jenkins.branch.BranchSource>
+        </data>
+        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranch                                                                                                             Project" reference="../.."/>
+    </sources>
+    <factory class="org.jenkinsci.plugins.workflow.multibranch.WorkflowBranchProje                                                                                                             ctFactory">
+        <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranch                                                                                                             Project" reference="../.."/>
+        <scriptPath>Jenkinsfile</scriptPath>
+    </factory>
+</org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject>
