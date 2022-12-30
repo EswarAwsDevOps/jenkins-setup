@@ -11,7 +11,26 @@
     </actions>
     <description></description>
     <keepDependencies>false</keepDependencies>
-    <properties/>
+    <properties>
+        <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+            <triggers>
+                <org.jenkinsci.plugins.gwt.GenericTrigger plugin="generic-webhook-trigger@1.86.1">
+                    <spec></spec>
+                    <regexpFilterText></regexpFilterText>
+                    <regexpFilterExpression></regexpFilterExpression>
+                    <printPostContent>false</printPostContent>
+                    <printContributedVariables>false</printContributedVariables>
+                    <causeString>Generic Cause</causeString>
+                    <token>{{COMPONENT}}</token>
+                    <tokenCredentialId></tokenCredentialId>
+                    <silentResponse>false</silentResponse>
+                    <overrideQuietPeriod>false</overrideQuietPeriod>
+                    <shouldNotFlattern>false</shouldNotFlattern>
+                    <allowSeveralTriggersPerBuild>false</allowSeveralTriggersPerBuild>
+                </org.jenkinsci.plugins.gwt.GenericTrigger>
+            </triggers>
+        </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+    </properties>
     <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps">
         <scm class="hudson.plugins.git.GitSCM" plugin="git">
             <configVersion>2</configVersion>
@@ -33,6 +52,5 @@
         <lightweight>true</lightweight>
     </definition>
     <triggers/>
-    <authToken>{{COMPONENT}}</authToken>
     <disabled>false</disabled>
 </flow-definition>
