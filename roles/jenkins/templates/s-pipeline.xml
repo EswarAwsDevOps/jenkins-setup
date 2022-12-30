@@ -33,6 +33,6 @@
         <lightweight>true</lightweight>
     </definition>
     <triggers/>
-    <authToken>testing-token</authToken>
+    <authToken>{{COMPONENT}}</authToken>
     <disabled>false</disabled>
 </flow-definition>
