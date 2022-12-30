@@ -13,9 +13,5 @@
   vars:
     COMPONENT: "{{item}}"
   loop:
-    - frontend
-    - catalogue
-    - cart
-    - user
-    - shipping
-    - payment
+    - roboshop-infra
+
