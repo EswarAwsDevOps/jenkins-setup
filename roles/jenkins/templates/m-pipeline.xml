@@ -39,7 +39,7 @@
                     <properties class="empty-list"/>
                 </strategy>
                 <buildStrategies>
-                    <jenkins.branch.buildstrategies.basic.NamedBranchBuildStrategyImpl plu                                                                                                             gin="basic-branch-build-strategies">
+                    <jenkins.branch.buildstrategies.basic.NamedBranchBuildStrategyImpl plugin="basic-branch-build-strategies">
                         <filters/>
                     </jenkins.branch.buildstrategies.basic.NamedBranchBuildStrategyImpl>
                     <jenkins.branch.buildstrategies.basic.BranchBuildStrategyImpl plugin="                                                                                                             basic-branch-build-strategies"/>
