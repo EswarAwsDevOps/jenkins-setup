@@ -19,7 +19,7 @@
     <triggers>
         <com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger plugin=                                                                                                             "multibranch-scan-webhook-trigger">
             <spec></spec>
-            <token>test</token>
+            <token>{{COMPONENT}}</token>
         </com.igalg.jenkins.plugins.mswt.trigger.ComputedFolderWebHookTrigger>
     </triggers>
     <disabled>false</disabled>
@@ -27,8 +27,8 @@
         <data>
             <jenkins.branch.BranchSource>
                 <source class="jenkins.plugins.git.GitSCMSource" plugin="git@">
-                    <id>a84aa28a-b91c-4e8c-b0df-88432bb7e0fd</id>
-                    <remote>https://github.com/EswarAwsDevOps/cart</remote>
+                    <id>{{random_id}}</id>
+                    <remote>https://github.com/EswarAwsDevOps/{{COMPONENT}}</remote>
                     <credentialsId></credentialsId>
                     <traits>
                         <jenkins.plugins.git.traits.BranchDiscoveryTrait/>

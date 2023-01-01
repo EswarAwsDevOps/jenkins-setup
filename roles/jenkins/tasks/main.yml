@@ -8,22 +8,22 @@
   loop:
     - CI-Pipelines
 
-#- name: Include Multi Branch Pipeline tasks
-#  ansible.builtin.include_tasks: m-pipelines.yml
-#  vars:
-#    COMPONENT: "{{item}}"
-#  loop:
-#    - frontend
-#    - catalogue
-#    - cart
-#    - user
-#    - shipping
-#    - payment
-
-- name: Include Single Branch Pipeline tasks
-  ansible.builtin.include_tasks: s-pipelines.yml
+- name: Include Multi Branch Pipeline tasks
+  ansible.builtin.include_tasks: m-pipelines.yml
   vars:
     COMPONENT: "{{item}}"
   loop:
-    - roboshop-infra
+    - frontend
+    - catalogue
+    - cart
+    - user
+    - shipping
+    - payment
+
+#- name: Include Single Branch Pipeline tasks
+#  ansible.builtin.include_tasks: s-pipelines.yml
+#  vars:
+#    COMPONENT: "{{item}}"
+#  loop:
+#    - roboshop-infra
 
