@@ -8,7 +8,7 @@
   loop:
     - CI-Pipelines
 
-- name: Include Multi Branch Pipeline tasks
+- name: Include Pipeline tasks
   ansible.builtin.include_tasks: m-pipelines.yml
   vars:
     COMPONENT: "{{item}}"
